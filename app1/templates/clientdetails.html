@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body
+        background-color:pink
+    </style>
+</head>
+<body>
+<table border="2px" cellspacing="2px" cellpadding="10px" style="background-color: yellow;">
+    <thead>
+
+        <th>ID</th>
+        <th>Name</th>
+
+        <th>AGE</th>
+        <th>EMAIL</th>
+        <th>PASSWORD</th>
+        <th colspan="4">Action</th>
+
+
+    </thead>
+
+    <tbody>
+            {%for i in data%}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.age}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.password}}</td>
+                <td><a href="del1?id={{i.id}}">Delete1</a><td>
+                <td><a href="edit/{{i.id}}">Edit</a></td>
+                <td><a href="del2/{{i.id}}">Delete2</a><td>
+
+
+            </tr>
+            {%endfor%}
+    </tbody>
+</table>
+
+</body>
+</html>

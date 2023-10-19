@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+        background-color:white
+        }
+        body{
+
+    </style>
+</head>
+<body>
+<table border="2px" cellspacing="2px" cellpadding="10px" style="background-color: babypink;">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Pro.Name</th>
+        <th>Price</th>
+        <th>DATE</th>
+        <th colspan="10">Client</th>
+    </tr>
+
+    </thead>
+    <body>
+    <tbody>
+            {%for i in data%}
+            <tr>
+
+                <td>{{i.id}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.price}}</td>
+                 <td>{{i.month}}</td>
+                <td>{{i.salary}}</td>
+                <td>{{i.client.id}}</td>
+                <td>{{i.month}}</td>
+                <td>{{i.client.name}}</td>
+                 <td>{{i.client.email}}</td>
+<!--                <td>{{i.client.age}}</td>-->
+
+                <td>{{i.client.password}}</td>
+
+            </tr>
+
+            {%endfor%}
+    </body>
+</table>
+
+</body>
+</html>
